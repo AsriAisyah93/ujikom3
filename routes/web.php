@@ -40,7 +40,7 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 //route sesudah login
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index')->middleware(['cekUserLogin:admin,kasir']);
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index')->middleware(['cekUserLogin:admin,kasir,owner']);
     Route::resource('/pelanggan', PelangganController::class)->middleware(['cekUserLogin:kasir']);
     Route::resource('/transaksi', TransaksiController::class)->middleware(['cekUserLogin:kasir']);
     Route::get('/nota/{noFaktur}', [TransaksiController::class, 'faktur'])->middleware(['cekUserLogin:kasir']);
@@ -50,7 +50,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/stok', StokController::class)->middleware(['cekUserLogin:admin']);
     Route::resource('/pemesanan', PemesananController::class)->middleware(['cekUserLogin:admin']);
     Route::resource('/titipan', TitipanController::class)->middleware(['cekUserLogin:admin']);
-    Route::resource('/det_transaksi', DetailTransaksiController::class)->middleware(['cekUserLogin:admin,kasir']);
+    Route::resource('/det_transaksi', DetailTransaksiController::class)->middleware(['cekUserLogin:admin,kasir,owner']);
     Route::resource('/history_titipan', HistoryTitipanController::class)->middleware(['cekUserLogin:admin']);
     Route::resource('/jenis', JenisController::class)->middleware(['cekUserLogin:admin']);
     Route::get('/tentang-aplikasi', [TentangAplikasiController::class, 'index'])->name('tentang-aplikasi');
@@ -59,7 +59,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     // Route::delete('/absensi-karyawan/{absensiKaryawan}', 'AbsensiKaryawanController@destroy')->name('absensiKaryawan.destroy');
-    Route::resource('/absensi', AbsensiKaryawanController::class)->middleware(['cekUserLogin:admin,kasir']);
+    Route::resource('/absensi', AbsensiKaryawanController::class)->middleware(['cekUserLogin:admin,kasir,owner']);
     Route::put('/update-status-absensi/{id}', [AbsensiKaryawanController::class, 'updateStatus'])->middleware(['cekUserLogin:admin,kasir']);
 
     

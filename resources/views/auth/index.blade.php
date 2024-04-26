@@ -74,7 +74,7 @@
                                     </h1>
                                     <p>
                                         ©2016 All Rights Reserved. Gentelella
-                                        Alela! is a web by .
+                                        Alela! is a web .
                                         Privacy and Terms
                                     </p>
                                 </div>
@@ -151,7 +151,7 @@
                                 </h1>
                                 <p>
                                     ©2024 All Rights Reserved. Gentelella
-                                    Alela! is a Web by .
+                                    Alela! is a Web .
                                     Privacy and Terms
                                 </p>
                             </div>

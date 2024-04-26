@@ -55,10 +55,6 @@
                                                 @endforeach
                                             </td>
                                             <td>{{ $item->total_harga }}</td>
-                                            <td>
-                                                @csrf
-                                                </form>
-                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -68,24 +64,28 @@
                     </div>
                 </div>
             </div>
-            @endsection
-            @push('script')
-            <script>
-                $(document).ready(function() {
-                    $('#dataTable').DataTable({
-                        "paging": true, // Menampilkan paging
-                        "lengthChange": true, // Memungkinkan pengguna mengubah jumlah entri per halaman
-                        "searching": true, // Memungkinkan pencarian data
-                        "ordering": true, // Mengaktifkan pengurutan
-                        "info": true, // Menampilkan informasi halaman dan jumlah data
-                        "autoWidth": false, // Menonaktifkan penyesuaian otomatis lebar kolom
-                        // Atur kolom tertentu untuk disorot saat menggunakan fitur pencarian
-                        "columnDefs": [{
-                            "searchable": false,
-                            "orderable": false,
-                            "targets": 0
-                        }]
-                    });
-                });
-            </script>
-            @endpush
+        </div>
+    </div>
+</div>
+@endsection
+
+@push('script')
+<script>
+    $(document).ready(function() {
+        $('#dataTable').DataTable({
+            "paging": true, // Menampilkan paging
+            "lengthChange": true, // Memungkinkan pengguna mengubah jumlah entri per halaman
+            "searching": true, // Memungkinkan pencarian data
+            "ordering": true, // Mengaktifkan pengurutan
+            "info": true, // Menampilkan informasi halaman dan jumlah data
+            "autoWidth": false, // Menonaktifkan penyesuaian otomatis lebar kolom
+            // Atur kolom tertentu untuk disorot saat menggunakan fitur pencarian
+            "columnDefs": [{
+                "searchable": false,
+                "orderable": false,
+                "targets": 0
+            }]
+        });
+    });
+</script>
+@endpush

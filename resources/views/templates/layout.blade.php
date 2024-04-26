@@ -114,6 +114,24 @@
                     </div>
                 </div>
                 @endif
+
+                @if(Auth::user()->role == 'owner')
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <h3>Kasir</h3>
+                        <ul class="nav side-menu">
+                            <li><a href="{{url ('/absensi') }}"><i class="fa fa-users"></i> Absensi </a>
+                            <li><a href="{{url ('/det_transaksi') }}"><i class="fa fa-list-alt"></i> History Transaksi </a>
+                            <ul class="nav child_menu">
+
+                                    <!-- <li><a href="{{ url('/jenis') }}">jenis</a></li>
+                                        <li><a href="{{ url('/menu') }}">Menu</a></li> -->
+                            </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                @endif
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                     <div class="menu_section">
                     <ul class="nav side-menu">

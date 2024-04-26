@@ -10,8 +10,8 @@
             <ul class="menu-item" style="cursor: pointer;">
                 @if(isset($j->menu) && count($j->menu) > 0)
                 @foreach($j->menu as $menu)
-                <li data-barang="menu" data-harga="{{ $menu->harga}}" data-id="{{ $menu->id}}" data-stok="{{ $menu->stok_id ? $menu->stok->jumlah:0}}" data-image="{{ $menu->image}}">
-                    <img width="50px" src="{{ asset('storage/menu-image') }}/{{ $menu->image}}" alt="">
+                <li data-barang="menu" data-harga="{{ $menu->harga}}" data-id="{{ $menu->id}}" data-stok="{{ $menu->stok_id ? $menu->stok->jumlah:0}}" data-image="{{ $menu->image}}" data-nama_menu="{{ $menu->nama_menu }}">
+                    <img width="100px" src="{{ asset('storage/menu-image') }}/{{ $menu->image}}" alt="">
                     <div>{{ $menu->nama_menu }}</div>
                     <div>Stok: {{ $menu->stok_id ? $menu->stok->jumlah:0 }}</div>
                     <div>Harga: {{ $menu->harga }}</div>
@@ -33,13 +33,12 @@
 
     </ul>
     <div class="item sidebar">
+        <h1>Payment</h1>
         <ul class="ordered-list"></ul>
         <div>
             <p>Total Bayar :</p>
             <h2 id="total"><i class="fa fa-usd"></i> 0,00 </h2>
-            <button id="btn-bayar">Bayar</button>
-        </div>
-        <div>
+            <button id="btn-bayar" class="btn btn-primary">Bayar</button>
         </div>
     </div>
     <div class="item footer">Footer</div>
@@ -145,6 +144,7 @@
             const harga = parseFloat(data.harga);
             const stok = parseFloat(data.stok);
             const id = parseInt(data.id);
+            const nama_menu = data.nama_menu;
             if (stok == 0) {
                 return
             }
@@ -162,7 +162,14 @@
                 };
                 orderedList.push(dataN);
 
-                let listOrder = `<li data-jenis-barang="${jenisBarang}" data-id="${id}" data-stok="${stok}"> <h3>${menu_clicked}</h3>`;
+                let listOrder = `<li data-jenis-barang="${jenisBarang}" data-id="${id}" data-stok="${stok}">
+                <h4>
+                    <p>${nama_menu}</p>
+                </h4>
+                <h5>
+                    <p>Rp.${harga}</p>
+                </h5>
+                `;
                 listOrder += `<button class="btn-dec"> - </button>`;
                 listOrder += `<input class="qty-item" type="number" value="1" style="3rem" readonly/>
                                 <button class="btn-inc">+</button><br>
