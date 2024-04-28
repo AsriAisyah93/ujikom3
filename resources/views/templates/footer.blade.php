@@ -46,7 +46,7 @@
 <script src="{{ asset('sweetalert') }}/dist/sweetalert2.min.js" crossorigin="anonymous"></script>
 <script src="{{ asset('assets') }}/vendors/datatables.net/js/jquery.dataTables.js" crossorigin="anonymous"></script>
 <script src="{{ asset('assets') }}/vendors/datatables.net/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-
+<script src="{{ asset('js')}}/canvasjs.min.js"></script>
 
 @stack('script')
 </body>

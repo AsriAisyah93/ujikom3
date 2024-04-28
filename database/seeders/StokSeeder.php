@@ -14,6 +14,6 @@ class StokSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
     }
 }

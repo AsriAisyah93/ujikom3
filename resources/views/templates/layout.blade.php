@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/favicon.ico" type="image/ico" />
+    <link rel="icon" href="aaa/favicon.ico" type="image/ico" />
     <title>Zie Caffe</title>
 
     <!-- Bootstrap -->
@@ -51,7 +51,7 @@
                     <!-- menu profile quick info -->
                     <div class="profile clearfix">
                         <div class="profile_pic">
-                            <img src="{{asset('assets')}}\images.jpg" alt="{{ asset('assets') }}." class="img-circle profile_img">
+                            <img src="{{asset('assets')}}\aaa.jpg" alt="{{ asset('assets') }}." class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
                             <span>Welcome</span>
@@ -69,12 +69,12 @@
                             <h3>Admin</h3>
                             <ul class="nav side-menu">
                                 <li><a href="{{ url('/')}}" class="nav-link"><i class="fa fa-home"></i> Home </a>
-                                <li><a href="{{url ('/absensi') }}"><i class="fa fa-users"></i> Absensi </a>
+                                <!-- <li><a href="{{url ('/absensi') }}"><i class="fa fa-users"></i> Absensi </a> -->
                                 <li><a href="{{url ('/jenis') }}" class="nav-link"><i class="fa fa-archive"></i> Jenis </a>
-                                <li><a href="{{ url('/kategori')}}" class="nav-link"><i class="fa fa-list"></i> Kategori </a>
+                                <!-- <li><a href="{{ url('/kategori')}}" class="nav-link"><i class="fa fa-list"></i> Kategori </a> -->
                                 <li><a href="{{url ('/menu') }}"><i class="fa fa-list-ul"></i> Menu </a>
                                 <li><a href="{{url ('/stok') }}" class="nav-link"><i class="fa fa-archive"></i> Stok </a>
-                                <li><a href="{{url ('/meja') }}"><i class="fa fa-list-alt"></i> Meja </a>
+                                <!-- <li><a href="{{url ('/meja') }}"><i class="fa fa-list-alt"></i> Meja </a> -->
                                 <li><a href="{{url ('/det_transaksi') }}"><i class="fa fa-list-alt"></i> History Transaksi </a>
 
                                 <ul class="nav child_menu">
@@ -100,7 +100,8 @@
                     <div class="menu_section">
                         <h3>Kasir</h3>
                         <ul class="nav side-menu">
-                            <li><a href="{{url ('/absensi') }}"><i class="fa fa-users"></i> Absensi </a>
+                        <li><a href="{{ url('/')}}" class="nav-link"><i class="fa fa-home"></i> Home </a>
+                            <!-- <li><a href="{{url ('/absensi') }}"><i class="fa fa-users"></i> Absensi </a> -->
                             <li><a href="{{url ('/transaksi') }}"><i class="fa fa-money"></i> Transaksi </a>
                             <li><a href="{{url ('/det_transaksi') }}"><i class="fa fa-list-alt"></i> History Transaksi </a>
                             <li><a href="{{url ('/pelanggan') }}"><i class="fa fa-users"></i> Pelanggan </a>
@@ -173,7 +174,7 @@
                     <ul class=" navbar-right">
                         <li class="nav-item dropdown open" style="padding-left: 15px;">
                             <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                                <img src="{{asset('assets')}}\images.jpg" alt="{{ asset('assets') }}.">{{Auth::user()->name}}
+                                <img src="{{asset('assets')}}\aaa.jpg" alt="{{ asset('assets') }}.">{{Auth::user()->name}}
                             </a>
                             <div class=" dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="javascript:;"> Profile</a>

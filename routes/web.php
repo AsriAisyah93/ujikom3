@@ -57,6 +57,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/contact', function () {
         return view('contact');
     });
+    Route::get('data_penjualan/{lastCount}', [DashboardController::class,'data_penjualan']);
 
     // Route::delete('/absensi-karyawan/{absensiKaryawan}', 'AbsensiKaryawanController@destroy')->name('absensiKaryawan.destroy');
     Route::resource('/absensi', AbsensiKaryawanController::class)->middleware(['cekUserLogin:admin,kasir,owner']);

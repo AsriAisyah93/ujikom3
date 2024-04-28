@@ -2,6 +2,10 @@
 
 namespace Database\Factories;
 
+use App\Models\Menu;
+use App\Models\Pelanggan;
+use App\Models\Transaksi;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,10 +18,17 @@ class DetailTransaksiFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
+        $transaksiId = fake()->randomElement(Transaksi::select('id')->get());
+        $menuId = fake()->randomElement(Menu::select('id')->get());
+        $jumlah = fake()->numberBetween(1, 5);
+        $subtotal = fake()->numberBetween(1, 100) . "000";
         return [
-            //
+            'id_transaksi' => $transaksiId,
+            'id_menu' => $menuId,
+            'jumlah' => $jumlah,
+            'subtotal' => $subtotal,
         ];
     }
 }

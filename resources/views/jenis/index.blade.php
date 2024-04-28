@@ -48,7 +48,7 @@
                     <tr>
                       <th>No</th>
                       <th>Name Jenis</th>
-                      <th>Name Kategori</th>
+                      <!-- <th>Name Kategori</th> -->
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -57,11 +57,11 @@
                     <tr>
                       <td>{{ $loop->iteration }}</td>
                       <td>{{ $item->nama_jenis }}</td>
-                      <td>
+                      <!-- <td>
                         @foreach($item->kategori as $k)
                         <p>{{$k->nama_kategori}}</p>
                         @endforeach
-                      </td>
+                      </td> -->
                       <td>
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#formInputJenis" data-mode="edit" data-id="{{ $item->id }}" data-nama_jenis="{{ $item->nama_jenis }}" data-nama_kategori="{{ $item->nama_kategori }}">
                           <i class='fa fa-edit'></i> Edit

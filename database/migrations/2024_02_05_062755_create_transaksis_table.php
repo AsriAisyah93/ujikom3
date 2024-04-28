@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('id_pelanggan')->nullable()->references('id')->on('pelanggans')->cascadeOnDelete();
             $table->double('total_harga');
             $table->enum('metode_pembayaran', ['cash', 'qris', 'transfer']);
-            $table->string('keterangan');
+            $table->string('keterangan')->nullable(true);
             $table->timestamps();
         });
     }
