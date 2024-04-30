@@ -58,6 +58,8 @@ Route::group(['middleware' => 'auth'], function () {
         return view('contact');
     });
     Route::get('data_penjualan/{lastCount}', [DashboardController::class,'data_penjualan']);
+    Route::post('/dashboard/filter', [DashboardController::class, 'filterChart'])->name('dashboard.filter');
+
 
     // Route::delete('/absensi-karyawan/{absensiKaryawan}', 'AbsensiKaryawanController@destroy')->name('absensiKaryawan.destroy');
     Route::resource('/absensi', AbsensiKaryawanController::class)->middleware(['cekUserLogin:admin,kasir,owner']);

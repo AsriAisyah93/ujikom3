@@ -37,6 +37,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Id Transaksi</th>
+                                            <th>Tanggal</th>
                                             <th>Id Menu</th>
                                             <th>Jumlah</th>
                                         </tr>
@@ -46,15 +47,16 @@
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $item->id }}</td>
+                                            <td>{{ $item->tanggal}}</td>
                                             <td>
                                                 @foreach($item->detailTransaksi as $detail)
                                                 <p>Nama:{{$detail->menu->nama_menu}}</p>
                                                 <p>Qty:{{$detail->jumlah}}</p>
-                                                <p>Subtotal:{{$detail->subtotal}}</p>
+                                                <p>Subtotal: Rp.{{$detail->subtotal}}</p>
                                                 <hr>
                                                 @endforeach
                                             </td>
-                                            <td>{{ $item->total_harga }}</td>
+                                            <td>Rp. {{ $item->total_harga}}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>

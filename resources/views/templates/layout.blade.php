@@ -74,6 +74,7 @@
                                 <!-- <li><a href="{{ url('/kategori')}}" class="nav-link"><i class="fa fa-list"></i> Kategori </a> -->
                                 <li><a href="{{url ('/menu') }}"><i class="fa fa-list-ul"></i> Menu </a>
                                 <li><a href="{{url ('/stok') }}" class="nav-link"><i class="fa fa-archive"></i> Stok </a>
+                            <li><a href="{{url ('/pelanggan') }}"><i class="fa fa-users"></i> Pelanggan </a>
                                 <!-- <li><a href="{{url ('/meja') }}"><i class="fa fa-list-alt"></i> Meja </a> -->
                                 <li><a href="{{url ('/det_transaksi') }}"><i class="fa fa-list-alt"></i> History Transaksi </a>
 
@@ -121,7 +122,8 @@
                     <div class="menu_section">
                         <h3>Kasir</h3>
                         <ul class="nav side-menu">
-                            <li><a href="{{url ('/absensi') }}"><i class="fa fa-users"></i> Absensi </a>
+                            <li><a href="{{ url('/')}}" class="nav-link"><i class="fa fa-home"></i> Home </a>
+                            <!-- <li><a href="{{url ('/absensi') }}"><i class="fa fa-users"></i> Absensi </a> -->
                             <li><a href="{{url ('/det_transaksi') }}"><i class="fa fa-list-alt"></i> History Transaksi </a>
                             <ul class="nav child_menu">
 
@@ -148,16 +150,16 @@
                 <div class="sidebar-footer hidden-small">
                     
                     <a data-toggle="tooltip" data-placement="top" title="Settings">
-                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        <span class="fa fa-cog" aria-hidden="true"></span>
                     </a>
                     <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                        <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        <span class="fa fa-arrows-alt" aria-hidden="true"></span>
                     </a>
                     <a data-toggle="tooltip" data-placement="top" title="Lock">
-                        <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        <span class="fa fa-eye-slash" aria-hidden="true"></span>
                     </a>
                     <a data-toggle="tooltip" data-placement="top" title="Logout" href="{{ route('logout')}}">
-                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        <span class="fa fa-power-off" aria-hidden="true"></span>
                     </a>
                 </div>
                 <!-- /menu footer buttons -->
@@ -178,11 +180,6 @@
                             </a>
                             <div class=" dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="javascript:;"> Profile</a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <span class="badge bg-red pull-right">50%</span>
-                                    <span>Settings</span>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">Help</a>
                                 <a class="dropdown-item" href="{{ route('logout')}}"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                             </div>
                         </li>
