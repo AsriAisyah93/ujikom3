@@ -71,11 +71,11 @@
                                 <li><a href="{{ url('/')}}" class="nav-link"><i class="fa fa-home"></i> Home </a>
                                 <!-- <li><a href="{{url ('/absensi') }}"><i class="fa fa-users"></i> Absensi </a> -->
                                 <li><a href="{{url ('/jenis') }}" class="nav-link"><i class="fa fa-archive"></i> Jenis </a>
-                                <!-- <li><a href="{{ url('/kategori')}}" class="nav-link"><i class="fa fa-list"></i> Kategori </a> -->
+                                <li><a href="{{ url('/kategori')}}" class="nav-link"><i class="fa fa-list"></i> Kategori </a>
                                 <li><a href="{{url ('/menu') }}"><i class="fa fa-list-ul"></i> Menu </a>
                                 <li><a href="{{url ('/stok') }}" class="nav-link"><i class="fa fa-archive"></i> Stok </a>
                             <li><a href="{{url ('/pelanggan') }}"><i class="fa fa-users"></i> Pelanggan </a>
-                                <!-- <li><a href="{{url ('/meja') }}"><i class="fa fa-list-alt"></i> Meja </a> -->
+                                <li><a href="{{url ('/meja') }}"><i class="fa fa-list-alt"></i> Meja </a>
                                 <li><a href="{{url ('/det_transaksi') }}"><i class="fa fa-list-alt"></i> History Transaksi </a>
 
                                 <ul class="nav child_menu">

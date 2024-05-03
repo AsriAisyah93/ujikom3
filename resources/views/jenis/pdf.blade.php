@@ -29,7 +29,6 @@
         <thead>
             <tr>
                 <th>No</th>
-                <th>Nama kategori</th>
                 <th>Jenis</th>
             </tr>
         </thead>
@@ -37,8 +36,7 @@
             @foreach ($data as $item)
             <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $item->nama_kategori }}</td>
-                <td>{{ $item->jenis->nama_jenis }}</td>
+                <td>{{ $item->nama_jenis }}</td>
             </tr>
             @endforeach
         </tbody>
